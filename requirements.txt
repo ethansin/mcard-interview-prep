@@ -2,3 +2,4 @@ setuptools
 nltk
 litellm
 faiss-cpu
+test
