@@ -1,3 +1,4 @@
 setuptools
 nltk
 litellm
+faiss-cpu
