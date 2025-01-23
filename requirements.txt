@@ -3,3 +3,4 @@ nltk
 litellm
 faiss-cpu
 langchain-community
+langchain-openai
