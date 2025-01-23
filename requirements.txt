@@ -2,4 +2,4 @@ setuptools
 nltk
 litellm
 faiss-cpu
-test
+langchain-community
