@@ -3,3 +3,5 @@
 .venv
 .vscode
 mcard_prep.egg-info
+movie_reviews_vector_store
+logs
