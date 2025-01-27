@@ -12,9 +12,7 @@ def query_vector_store(query: str, vector_store: FAISS, embeddings: OpenAIEmbedd
         query,
         k=k,
     )
-    for res in results:
-        print(f"* {res.page_content} [{res.metadata}]")
-
+    return results
 
 def main():
     logger = create_logger()
@@ -24,13 +22,16 @@ def main():
     embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
     vector_store = FAISS.load_local(vector_store_path, embeddings, "index", allow_dangerous_deserialization=True)
 
-    query_vector_store(
+    results = query_vector_store(
         query=query,
         vector_store=vector_store,
         embeddings=embeddings,
         logger=logger,
         k=2,
     )
+
+    for result in results:
+        print(result.page_content)
 
 if __name__ == "__main__":
     main()
