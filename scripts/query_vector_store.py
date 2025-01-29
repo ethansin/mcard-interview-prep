@@ -7,7 +7,7 @@ from utils.logging_utils import create_logger
 from logging import Logger
 from pathlib import Path
 
-def query_vector_store(query: str, vector_store: FAISS, embeddings: OpenAIEmbeddings, logger: Logger, k: int = 2):
+def query_vector_store(query: str, vector_store: FAISS, k: int = 2):
     results = vector_store.similarity_search(
         query,
         k=k,
@@ -25,8 +25,6 @@ def main():
     results = query_vector_store(
         query=query,
         vector_store=vector_store,
-        embeddings=embeddings,
-        logger=logger,
         k=2,
     )
 
