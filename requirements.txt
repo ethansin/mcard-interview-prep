@@ -4,3 +4,4 @@ litellm
 faiss-cpu
 langchain-community
 langchain-openai
+jinja2
